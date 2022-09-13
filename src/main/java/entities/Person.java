@@ -9,25 +9,25 @@ import javax.persistence.NamedQuery;
 
 
 @Entity
-@NamedQuery(name = "RenameMe.deleteAllRows", query = "DELETE from RenameMe")
-public class RenameMe implements Serializable {
+@NamedQuery(name = "Person.deleteAllRows", query = "DELETE from Person")
+public class Person implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     
-    public RenameMe() {
+    public Person() {
     }  
     
     // TODO, delete this class, or rename to an Entity class that makes sense for what you are about to do
     // Delete EVERYTHING below if you decide to use this class, it's dummy data used for the initial demo
-    private String dummyStr1;
-    private String dummyStr2;
+    private String name;
+    private int age;
 
-    public RenameMe(String dummyStr1, String dummyStr2) {
-        this.dummyStr1 = dummyStr1;
-        this.dummyStr2 = dummyStr2;
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
     }
 
     public Long getId() {
@@ -38,20 +38,20 @@ public class RenameMe implements Serializable {
         this.id = id;
     }
     
-    public String getDummyStr1() {
-        return dummyStr1;
+    public String getName() {
+        return name;
     }
 
-    public void setDummyStr1(String dummyStr1) {
-        this.dummyStr1 = dummyStr1;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getDummyStr2() {
-        return dummyStr2;
+    public int getAge() {
+        return age;
     }
 
-    public void setDummyStr2(String dummyStr2) {
-        this.dummyStr2 = dummyStr2;
+    public void setAge(int age) {
+        this.age = age;
     }
     
     
