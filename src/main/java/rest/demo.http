@@ -1,5 +1,9 @@
-GET http://localhost:8080/devops_starter_war_exploded/api/xxx
+###
+GET http://localhost:8080/devops_starter_war_exploded/api/person
 
+###
+GET http://localhost:8080/devops_starter_war_exploded/api/person/2
+Accept: application/json
 ###
 POST http://localhost:8080/devops_starter_war_exploded/api/xxx
 Content-Type: application/json
