@@ -9,8 +9,11 @@ import utils.EMF_Creator;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 
+import java.util.ArrayList;
 import java.util.List;
 
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.containsInAnyOrder;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class MovieFacadeTest {
@@ -75,10 +78,12 @@ public class MovieFacadeTest {
     @Test
     void getAll() {
         System.out.println("Testing getAll()");
-        Movies expected1 = m1;
-        Movies expected2 = m2;
-        List<Movies> actual = facade.getAllNonDtos();
-        assertEquals(expected1,actual.get(0));
-        assertEquals(expected2,actual.get(1));
+        //List<MoviesDTO> movies = new ArrayList<>();
+        MoviesDTO expected1 = new MoviesDTO(m1);
+        MoviesDTO expected2 = new MoviesDTO(m2);
+        List<MoviesDTO> actual = facade.getAll();
+        assertThat(actual, containsInAnyOrder(expected1, expected2));
+//        assertEquals(expected1,actual.get(0));
+//        assertEquals(expected2,actual.get(1));
     }
 }
