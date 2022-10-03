@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form id="usersForm" action="/firstFetch.js">
+        <div>
+            <input type="number" placeholder="Type a user-id" id="userInput">
+        </div>
+        <br>
+        <div>
+            <button type="button" onclick="whichUser();">Search on id</button>
+        </div>
+    </form>
+    <div>
+        <button type="button" onclick="allUsers();">Get all users</button>
+    </div>
+    <p>Single user</p>
+    <div id="listingUser"></div>
+    <br><br>
+    <p>All users</p>
+    <div id="listingUsers"></div>
+    <script src="firstFetch.js"></script>
+</body>
+</html>
