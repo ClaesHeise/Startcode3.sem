@@ -5,7 +5,7 @@
  - *JPA and REST*
 - *Testing, including database test*
 - *Testing, including tests of REST-API's*
-- *CI and CONTINUOUS DELIVERY*
+- *CI and CONTINUOUS DELIVERY*f*ck
 
 ## Flow 2 week 1
 
